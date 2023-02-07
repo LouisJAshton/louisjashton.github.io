@@ -103,6 +103,26 @@
 								<p></p>
 								<h2>Lock-on system</h2>
 								<p>A staple of the third-person genre, a lock on system was crucial for user experience and comfortable play.</p>
+								<p>To implement this system, I wanted the player to be able to:</p>
+								<ul style="list-style-type: disc; list-style-position: inside;">
+									<li>Lock on to the nearest enemy and face them</li>
+									<li>Move the lock to the next closest enemy</li>
+									<li>Only lock on to enemies within range</li>
+									<li>Change target when the current target is invalid</li>
+									<li>Cancel the lock</li>
+								</ul>
+								<p>I would need the number of stored targets to be dynamic so an array wasn't suitable. I settled on keeping a list of valid targets for the player to lock on to.
+									When the player inputs a request to lock-on, the script would collect all the objects tagged as enemies and store them. To get these enemies ordered by distance from
+									the player, I would then need to use a lambda function (a technique I learned during the solving of this problem) to calculate the distance of each object
+									and then sort in ascending order.
+								</p>
+								<p>Next, I would need to only lock on to targets within a pre-set radius around the player, so that the player wouldn't ever become locked to an enemy off screen. 
+									For this, I would count the number of targets that were in range during the lambda function and then only take the first <i>n</i> results from the stored list
+									as the final lock-on list. By clamping the upper limit of <i>n</i>, I could also implement a cap on the number of enemies that player would need to keep track of.
+								</p>
+								<p>Once the player has a target, a new function, "CheckLock", would be added to the "OnUpdate" delegate. This would check whether the current target was still valid and cause
+									the player to lock on to the next target if it was not valid. When the player unlocks, this function is removed from OnUpdate so as to not waste processing power.
+								</p>
 							</header>
 
 							<article class="from-left">
