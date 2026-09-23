@@ -107,23 +107,23 @@
           </div>
           <div class="project-details__content-main">
             <div class="project-details__desc">
-              <h3 class="project-details__content-title">Project Overview</h3>
-              <p class="project-details__desc-para">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-                alias tenetur minus quaerat aliquid, aut provident blanditiis,
-                deleniti aspernatur ipsam eaque veniam voluptatem corporis vitae
-                mollitia laborum corrupti ullam rem. Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Neque alias tenetur minus quaerat
-                aliquid, aut provident blanditiis, deleniti aspernatur ipsam
-                eaque veniam voluptatem corporis vitae mollitia laborum corrupti
-                ullam rem?
-              </p>
-              <p class="project-details__desc-para">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-                alias tenetur minus quaerat aliquid, aut provident blanditiis,
-                deleniti aspernatur ipsam eaque veniam voluptatem corporis vitae
-                mollitia laborum corrupti ullam rem?
-              </p>
+              <h3 class="project-details__content-title">Core Contributions</h3>
+              <div>
+                <h4 class="project-details__content-subtitle">Weapon Mod Effects System</h3>
+                  <p class="project-details__desc-para">
+                    Incursion is a roguelike with a variety of upgrades the player can equip. For the designers, it was critical that these effects were easy to script and iterate on.
+                  </p>
+                  <p class="project-details__desc-para">
+                    
+                  </p>
+                  <p class="project-details__desc-para">
+                    To ensure effects behaved consistently regardless of when they were applied to the player, a fixed order of operations was required. I sorted the possible effects into categories (additive modifiers, multiplicative modifiers, triggers etc.) and created the <code>EModifierType</code> enum to store them.
+                    Each concrete blueprint implementation of the <code>UAttackModifier</code> C++ class holds an <code>EModifierType</code>. When <code>UDamagePacket</code> evaluates its modifiers, it uses <code>EModifierType</code> to order them first.
+                  </p>
+                  <p class="project-details__desc-para">
+                    The result is that the player always gets the same output no matter what order they equipped their mods.
+                  </p>
+              </div>
             </div>
             <div class="project-details__tools-used">
               <h3 class="project-details__content-title">Tools Used</h3>
