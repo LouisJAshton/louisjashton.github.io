@@ -148,7 +148,7 @@
                 <a class="anchor" id="broadcast"></a>
                 <h4 class="project-details__content-subtitle">Broadcast/Listener Components and Visualiser</h3>
                 <p class="project-details__desc-para">
-                  When actors need to call methods on another actor, it was important that I keep their classes decoupled.
+                  When blueprint actors needed to call methods on another actor, it was important that I keep their classes decoupled.
                   To achieve this, I implemented a system similar to the observer pattern by creating the classes <code>UBroadcastComponent</code> and <code>UListenerComponent</code>.
                   Each <code>UListenerComponent</code> pointed to a blueprint or C++ method on its parent actor and each <code>UBroadcastComponent</code> stored a set of listeners to trigger.
                   This kept the classes of each actor in the level much simpler and decoupled.
