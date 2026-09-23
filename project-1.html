@@ -108,8 +108,8 @@
           <div class="project-details__content-main">
             <div class="project-details__desc">
               <h3 class="project-details__content-title">Core Contributions</h3>
-              <a class="anchor" id="modeffects"></a>
               <section>
+                <a class="anchor" id="modeffects"></a>
                 <h4 class="project-details__content-subtitle">Weapon Mod Effects System</h4>
                 <p class="project-details__desc-para">
                   Incursion is a roguelike with a variety of upgrades the player can equip. For the designers, it was critical that these effects were easy to script and iterate on in Blueprint.
@@ -131,8 +131,8 @@
                   The result is that the player always gets the same output no matter what order they equipped their mods.
                 </p> -->
               </section>
-              <a class="anchor" id="waypoints"></a>
               <section>
+                <a class="anchor" id="waypoints"></a>
                 <h4 class="project-details__content-subtitle">Waypoint Guidance System and Editor Tool</h3>
                   <p class="project-details__desc-para">
                     To guide the player to their objectives, the team needed a waypoints guidance system they could use to naturally lead the player.                
@@ -144,19 +144,29 @@
                     This way, each connection will only be drawn if it has not yet been visualised and each waypoint will only be visited once regardless of loops.
                   </p>
               </section>
-              <a class="anchor" id="broadcast"></a>
               <section>
+                <a class="anchor" id="broadcast"></a>
                 <h4 class="project-details__content-subtitle">Broadcast/Listener Components and Visualiser</h3>
-                  <p class="project-details__desc-para">
-                    When actors need to call methods on another actor, it was important that I keep their classes decoupled.
-                    To achieve this, I implemented a system similar to the observer pattern by creating the classes <code>UBroadcastComponent</code> and <code>UListenerComponent</code>.
-                    Each <code>UListenerComponent</code> pointed to a blueprint or C++ method on its parent actor and each <code>UBroadcastComponent</code> stored a set of listeners to trigger.
-                    This kept the classes of each actor in the level much simpler and decoupled.
-                  </p>                
-                  <p class="project-details__desc-para">
-                    However, keeping track of these connections was not trivial. They only existed in the inspector tab of the <code>UBroadcastComponent</code> so I drew them using <code>UComponentVisualizer</code>.
-                    Now, level designers could easily see what listeners were being broadcast to and each arrow was labelled with the actor being broadcast from, the actor being broadcast to and the method that was to be triggered on that actor.
-                  </p>
+                <p class="project-details__desc-para">
+                  When actors need to call methods on another actor, it was important that I keep their classes decoupled.
+                  To achieve this, I implemented a system similar to the observer pattern by creating the classes <code>UBroadcastComponent</code> and <code>UListenerComponent</code>.
+                  Each <code>UListenerComponent</code> pointed to a blueprint or C++ method on its parent actor and each <code>UBroadcastComponent</code> stored a set of listeners to trigger.
+                  This kept the classes of each actor in the level much simpler and decoupled.
+                </p>                
+                <p class="project-details__desc-para">
+                  However, keeping track of these connections was not trivial. They only existed in the inspector tab of the <code>UBroadcastComponent</code> so I drew them using <code>UComponentVisualizer</code>.
+                  Now, level designers could easily see what listeners were being broadcast to and each arrow was labelled with the actor being broadcast from, the actor being broadcast to and the method that was to be triggered on that actor.
+                </p>
+              </section>
+              <section>
+                <a class="anchor" id="progress"></a>
+                <h4 class="project-details__content-subtitle">Quest and Progress System</h3>
+                <p class="project-details__desc-para">
+                  
+                </p>                
+                <p class="project-details__desc-para">
+                  
+                </p>
               </section>
             </div>
             <div class="project-details__tools-used">
