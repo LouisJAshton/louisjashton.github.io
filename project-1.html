@@ -143,12 +143,16 @@
                   </p>
               </div>
               <div>
-                <h4 class="project-details__content-subtitle">Level Object Observer Pattern and Visualiser</h3>
+                <h4 class="project-details__content-subtitle">Broadcast/Listener Components and Visualiser</h3>
                   <p class="project-details__desc-para">
-                                    
+                    When actors need to call methods on another actor, it was important that I keep their classes decoupled.
+                    To achieve this, I implemented a system similar to the observer pattern by creating the classes <code>UBroadcastComponent</code> and <code>UListenerComponent</code>.
+                    Each <code>UListenerComponent</code> pointed to a blueprint or C++ method on its parent actor and each <code>UBroadcastComponent</code> stored a set of listeners to trigger.
+                    This kept the classes of each actor in the level much simpler and decoupled.
                   </p>                
                   <p class="project-details__desc-para">
-                    
+                    However, keeping track of these connections was not trivial. They only existed in the inspector tab of the <code>UBroadcastComponent</code> so I drew them using <code>UComponentVisualizer</code>.
+                    Now, level designers could easily see what listeners were being broadcast to and each arrow was labelled with the actor being broadcast from, the actor being broadcast to and the method that was to be triggered on that actor.
                   </p>
               </div>
             </div>
